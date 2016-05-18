@@ -1,0 +1,243 @@
+:set nocp                               " not in compatible mode
+" Vim-Plug {{{
+" ----------------------------------------------------------------------------
+"   Plug
+" ----------------------------------------------------------------------------
+
+" Load vim-plug
+if empty(glob("~/.vim/autoload/plug.vim"))
+    execute '!curl -fLo ~/.vim/autoload/plug.vim https://raw.github.com/junegunn/vim-plug/master/plug.vim'
+endif
+
+call plug#begin('~/.vim/plugged')
+
+" Colorschemes
+"Plug 'captbaritone/molokai'
+"Plug 'chriskempson/vim-tomorrow-theme'
+Plug 'altercation/vim-colors-solarized'
+"Plug 'fxn/vim-monochrome'
+"Plug 'chriskempson/base16-vim'
+"Plug 'NLKNguyen/papercolor-theme'
+
+" Syntax
+"Plug 'tpope/vim-git', { 'for': 'git' }
+"Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
+"Plug 'xsbeats/vim-blade', { 'for': 'blade' }
+"Plug 'qrps/lilypond-vim', { 'for': 'lilypond' }
+"Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
+
+" Vim motions on speed!
+"Plug 'easymotion/vim-easymotion'
+
+" Manipulating and moving between function arguments.
+"Plug 'PeterRincker/vim-argumentative'
+
+" Provides insert mode auto-completion for quotes, parens, brackets, etc.
+"Plug 'Raimondi/delimitMate'
+
+" Edit every file in a quickfix list at the same time
+"Plug 'Olical/vim-enmasse'
+
+" A Vim alignment plugin
+"Plug 'junegunn/vim-easy-align'
+
+" A vim plugin for Ack
+" Plug 'mileszs/ack.vim'
+
+" Show a diff via Vim sign column.
+"Plug 'mhinz/vim-signify'
+
+" Vim plugin for the_silver_searcher, 'ag',
+"Plug 'rking/ag.vim'
+
+" Search local vimrc files (".lvimrc") in the tree (root dir up to current dir) and load them.
+"Plug 'embear/vim-localvimrc'
+
+" Asynchronous build and test dispatcher
+"Plug 'tpope/vim-dispatch'
+
+" The ultimate snippet solution for Vim. Send pull requests to SirVer/ultisnips!
+"Plug 'SirVer/ultisnips'
+
+" Expand characters to code if not in a comment or string
+"Plug 'Olical/vim-syntax-expand'
+
+" Completion
+"Plug 'mattn/emmet-vim', { 'for': 'html' }
+
+" Make % match xml tags
+"Plug 'edsono/vim-matchit', { 'for': ['html', 'xml'] }
+
+" Make tab handle all completions
+"Plug 'ervandew/supertab'
+
+" Syntastic: Code linting errors
+"Plug 'scrooloose/syntastic', { 'for': ['python', 'javascript', 'css'] }
+
+" Pairs of handy bracket mappings
+"Plug 'tpope/vim-unimpaired'
+
+" Fancy statusline
+Plug 'bling/vim-airline'
+
+" Fuzzy file opener
+Plug 'kien/ctrlp.vim'
+
+" CtrlP extension to navigate and jump to function defs
+"Plug 'tacahiroy/ctrlp-funky'
+
+" Filetype detection and syntax highlightnig for JSON
+Plug 'elzr/vim-json'
+
+" Auto-pairing brackets, braces etc
+Plug 'jiangmiao/auto-pairs'
+
+" Snippets usage
+Plug 'SirVer/ultisnips'
+
+"Plug 'rking/ag.vim'
+
+" CamelCase motions through words
+"Plug 'bkad/CamelCaseMotion'
+
+" Split and join lines of code intelligently
+"Plug 'AndrewRadev/splitjoin.vim'
+
+"Plug 'gcmt/taboo.vim'
+
+" Split navigation that works with tmux
+"Plug 'christoomey/vim-tmux-navigator'
+
+" Take notes and keep todo lists in vim
+"Plug 'vimwiki/vimwiki'
+
+" Vastly improved Javascript indentation and syntax support in Vim
+"Plug 'pangloss/vim-javascript'
+
+" Visualize undo tree
+"Plug 'mbbill/undotree'
+
+" Nerdtree
+Plug 'scrooloose/nerdtree'
+
+" A plugin of NERDTree showing git status flags.
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
+" You Complete Me
+"Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
+
+"Plug 'parkr/vim-jekyll'
+
+" Gundo
+"Plug 'sjl/gundo.vim'
+
+" Vim plugin for the Perl module / CLI script 'ack'
+"Plug 'mileszs/ack.vim'
+
+" Tern for vim
+"Plug 'marijnh/tern_for_vim'
+
+" A Vim plugin which shows a git diff in the gutter (sign column) and stages/reverts hunks.
+Plug 'airblade/vim-gitgutter'
+
+" Plugins from tpope
+"Plug 'tpope/vim-abolish'
+"Plug 'tpope/vim-commentary'
+"Plug 'tpope/vim-dispatch'
+"Plug 'tpope/vim-endwise'
+"Plug 'tpope/vim-eunuch'
+"Plug 'tpope/vim-fireplace'
+Plug 'tpope/vim-fugitive'
+"Plug 'tpope/vim-leiningen'
+"Plug 'tpope/vim-markdown', { 'for': 'markdown' }
+"Plug 'tpope/vim-projectionist'
+"Plug 'tpope/vim-ragtag'
+"Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-sensible'
+"Plug 'tpope/vim-sexp-mappings-for-regular-people'
+"Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-surround'
+"Plug 'tpope/vim-unimpaired'
+"Plug 'tpope/vim-vinegar'
+
+Plug 'm-kat/aws-vim'
+Plug 'hashivim/vim-vagrant'
+
+" Other plugins require curl
+if executable("curl")
+    " Webapi: Dependency of Gist-vim
+    Plug 'mattn/webapi-vim'
+
+    " Gist: Post text to gist.github
+    Plug 'mattn/gist-vim'
+endif
+
+filetype plugin indent on               " required!
+call plug#end()
+"}}}
+" Colors {{{
+set background=dark
+colorscheme solarized 		            " colorscheme
+let g:solarized_termcolors=256
+let g:solarized_termtrans=1
+set hlsearch                            " highlight search matches
+"}}}
+" Spaces & Tabs {{{
+set tabstop=4       		            " number of visual spaces per TAB
+set softtabstop=4   		            " number of spaces in tab when editing
+set shiftwidth=4                        " amount of whitespaces to insert or remove using the indentation commands
+set expandtab       		            " tabs are spaces
+"}}}
+" UI Layout {{{
+set number          		            " show line number
+set cursorline      		            " highlight current line
+filetype indent on  		            " load filetype-specific indent files
+set lazyredraw          	            " redraw only when we need to
+set showmatch           	            " highlight matching [{()}]
+"}}}
+" Searching {{{
+set incsearch                           " search as characters are entered
+set hlsearch                            " highlight matches
+" turn off search highlight
+nnoremap <leader><space> :nohlsearch<CR> " Turn off search highlights with space
+"}}}
+" Folding {{{
+set foldenable                          " enable folding
+set foldlevelstart=10                   " open most folds by default
+set foldnestmax=10                      " 10 nested fold ma
+nnoremap <space> za                     " space open/closes folds
+set foldmethod=marker                   " fold based on marker level
+"}}}
+" Custom movement {{{
+" Disable arrow keys
+inoremap  <Up>     <NOP>
+inoremap  <Down>   <NOP>
+inoremap  <Left>   <NOP>
+inoremap  <Right>  <NOP>
+noremap   <Up>     <NOP>
+noremap   <Down>   <NOP>
+noremap   <Left>   <NOP>
+noremap   <Right>  <NOP>
+nnoremap gV `[v`]                       " highlight last inserted text
+"}}}
+"{{{ Leader shortcuts
+noremap <leader>u :GundoToggle<CR>      " toggle gundo
+"}}}
+"{{{ CtrlP
+let g:ctrlp_match_window = 'bottom,order:ttb'
+let g:ctrlp_switch_buffer = 0
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+"}}}
+"{{{ NERDTree
+map <C-n> :NERDTreeToggle<CR>           " toggle nerdtree
+"}}}
+"{{{ Backups
+set backup
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set backupskip=/tmp/*,/private/tmp/*
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set writebackup
+"}}}
+set modelines=1
+" vim:foldmethod=marker:foldlevel=0
