@@ -1,0 +1,21 @@
+# Generic
+export EDITOR='vim'
+
+# System-specific
+os=`uname -s`
+
+case $os in
+    "Darwin" )
+        export PATH="$HOME/bin:$PATH"
+        alias dircolors='gdircolors'
+        ;;
+esac
+
+if [[ "$os" == "Darwin" ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
+# Local variables (not to be committed)
+if [[ -f ~/.zprofile_local ]]; then
+    source ~/.zprofile_local
+fi
