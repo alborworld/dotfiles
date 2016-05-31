@@ -21,10 +21,5 @@ export WORKSPACE_TDP="$HOME/workspace_tdp"
 # OpenSSL
 export OpenSSL_HOME=/usr/local/ssl
 
-# Source private aws env variables 
-if [ -e "$HOME/.aws/envvars.sh" ]; then
-        source $HOME/.aws/envvars.sh
-fi
-
 export JDK_HOME=$JAVA_HOME
 export PATH="$PATH:${JAVA_HOME}/bin:${OpenSSL_HOME}/bin:$HOME/bin"
