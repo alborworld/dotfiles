@@ -15,8 +15,8 @@ case $os in
         ;;
 esac
 
-export WORKSPACE_MYWORLD="$HOME/workspace_myworld"
 export WORKSPACE_TDP="$HOME/workspace_tdp"
+export EDITOR='vim'
 
 # OpenSSL
 export OpenSSL_HOME=/usr/local/ssl
