@@ -12,6 +12,7 @@ case $os in
         export EC2_AMITOOL_HOME=/usr/local/ec2/ec2-ami-tools-1.5.7
         export PATH="$PATH:$EC2_AMITOOL_HOME/bin"
         export PATH="$PATH:$HOME/apps/packer"
+        export WIN_HOME="/mnt/c/Users/albi"
         ;;
 esac
 
