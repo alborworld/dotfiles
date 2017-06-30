@@ -13,6 +13,7 @@ case $os in
         export PATH="$PATH:$EC2_AMITOOL_HOME/bin"
         export PATH="$PATH:$HOME/apps/packer"
         export WIN_HOME="/mnt/c/Users/albi"
+        export HOME_DELIVERY="/media/delivery"
         ;;
 esac
 
