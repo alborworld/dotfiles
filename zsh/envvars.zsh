@@ -14,6 +14,9 @@ case $os in
         export PATH="$PATH:$HOME/apps/packer"
         export WIN_HOME="/mnt/c/Users/albi"
         export HOME_DELIVERY="/media/delivery"
+        export LOG_PATH="$HOME/log/instance-trace.log"
+        google-drive-ocamlfuse -label alborworld "Google Drive - Alborworld"
+        google-drive-ocamlfuse -label imiarma "Google Drive - Imiarma"
         ;;
 esac
 
