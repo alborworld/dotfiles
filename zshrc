@@ -1,4 +1,4 @@
-# Load zgen
+# Lod zgen
 source "$HOME/.zgen/zgen.zsh"
 
 # Check if there's no init script
@@ -15,10 +15,8 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/tmux
     zgen oh-my-zsh plugins/colorize
     zgen oh-my-zsh plugins/github
-    zgen oh-my-zsh plugins/mvn
-    #zgen oh-my-zsh plugins/node
-    #zgen oh-my-zsh plugins/npm
     zgen oh-my-zsh plugins/aws
+    zgen oh-my-zsh plugins/azcli
     zgen oh-my-zsh plugins/docker
     zgen oh-my-zsh plugins/vagrant
     zgen oh-my-zsh plugins/pip
@@ -66,5 +64,7 @@ unsetopt correct_all
 # Solarized dircolors
 eval `dircolors $HOME/.dircolors-solarized/dircolors.256dark`
 
-# NPM completion
-#. <(npm completion)
+# PyEnv settings
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"

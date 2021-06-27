@@ -3,10 +3,11 @@
     editor = vim
 	pager=less -x4
 	autocrlf = input
+	excludesfile = /Users/albor/.gitignore_global
 # }}}
 # user {{{
 [user]
-	email = Alessandro.Bortolussi@tomtom.com
+	email = alessandro@alborworld.com
 	name = Alessandro Bortolussi
 # }}}
 # color {{{
@@ -146,3 +147,9 @@
     # Amends the last commit with everything that has been modified and uses the same commit comment
     caa = commit -a —amend -C HEAD
 # }}}
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

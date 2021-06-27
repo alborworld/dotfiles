@@ -176,10 +176,10 @@ filetype plugin indent on               " required!
 call plug#end()
 "}}}
 " Colors {{{
-set background=dark
-colorscheme solarized 		            " colorscheme
-let g:solarized_termcolors=256
-let g:solarized_termtrans=1
+" set background=dark
+" colorscheme solarized 		            " colorscheme
+" let g:solarized_termcolors=256
+" let g:solarized_termtrans=1
 set hlsearch                            " highlight search matches
 "}}}
 " Spaces & Tabs {{{
