@@ -13,6 +13,9 @@ case $os in
        ;;
 esac
 
+alias lt='ls -ltr'
+alias l.='ls -d .* --color=auto'
+alias tree='tree -C'
 alias vi="vim"
 alias edit="vim"
 alias getoctal="stat -c \"%a %n\""
