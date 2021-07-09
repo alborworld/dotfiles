@@ -35,9 +35,6 @@ if ! zgen saved; then
     zgen load zsh-users/zsh-syntax-highlighting
     zgen load felixr/docker-zsh-completion
 
-    # liquidprompt
-    zgen load nojhan/liquidprompt
-
     # Save akk to init script
     zgen save
 fi
@@ -68,3 +65,6 @@ eval `dircolors $HOME/.dircolors-solarized/dircolors.256dark`
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
+
+# Starship
+eval "$(starship init zsh)"

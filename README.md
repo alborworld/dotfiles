@@ -7,7 +7,7 @@ directory.
 
 INSTALLATION
 ------------
-1. Make sure zsh, curl and tmux are installed and enabled. For zsh, change the shell:
+1. Make sure zsh, curl, tmux, starship are installed and enabled. For zsh, change the shell:
 `$ sudo chsh -s $(which zsh) ${USER}`
 
 2. Clone zgen in the home directory: 

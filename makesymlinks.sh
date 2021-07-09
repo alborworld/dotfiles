@@ -6,7 +6,7 @@
 ########## Variables
 
 dotfiles_dir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )   # dotfiles directory
-dotfiles="gitconfig liquidpromptrc tmux.conf vimrc zshrc"        # list of files/folders to symlink in homedir
+dotfiles="gitconfig tmux.conf vimrc zshrc"        # list of files/folders to symlink in homedir
 zsh_custom_settings="$HOME/.config/zsh"                          # zsh custom settings directory
 
 ##########
