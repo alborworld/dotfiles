@@ -1,4 +1,4 @@
-# Lod zgen
+# Load zgen
 source "$HOME/.zgen/zgen.zsh"
 
 # Check if there's no init script
@@ -67,4 +67,5 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 
 # Starship
+export STARSHIP_CONFIG="$HOME/.config/dotfiles/starship.toml"
 eval "$(starship init zsh)"
