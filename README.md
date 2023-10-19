@@ -4,7 +4,7 @@ This repository includes all of my custom dotfiles. It makes use of [chezmoi](ht
 
 INSTALLATION
 ------------
-1. Make sure `chezmoi`, `zsh`, `curl`, `tmux`, `starship`, `fzf`, `vim` are installed. 
+1. Make sure `chezmoi`, `zsh`, `curl`, `tmux`, `starship`, `fzf`, `vim` and `vim-plug` are installed. 
 
 2. In Mac OS install also `coreutils`:
    * `$ brew install coreutils`
