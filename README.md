@@ -1,23 +1,24 @@
 Dotfiles
 --------
-This repository includes all of my custom dotfiles.  They should be cloned to
-a directory of your choice (e.g. `~/.config/dotfiles`). The included setup script 
-creates symlinks from your home directory to the files which are located in the cloned 
-directory.
+This repository includes all of my custom dotfiles. It makes use of [chezmoi](https://www.chezmoi.io/).
 
 INSTALLATION
 ------------
-1. Make sure zsh, curl, tmux, starship, fzf are installed and enabled. For zsh, change the shell:
+1. Make sure `chezmoi`, `zsh`, `curl`, `tmux`, `starship`, `fzf`, `vim` are installed. 
+
+2. In Mac OS install also `coreutils`:
+   * `$ brew install coreutils`
+
+3. Change the shell to zsh:
    * `$ sudo chsh -s $(which zsh) ${USER}`
 
-   In Mac OS install also `coreutils`:
-   * `$ brew install coreutils`
-   
-4. Install zim
-   * `curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh`
+4. Initialize `chezmoi` with this repo:
+   * `$ chezmoi init https://github.com/alborworld/dotfiles.git`
 
-5. Install vim:
-   * UBUNTU: `$ sudo apt-get install vim`
-   * MAC OS: `$ sudo brew install vim`
+   Check what changes that `chezmoi` will make to your home directory by running:
+   * `$ chezmoi diff`
 
-6. In vi(m), run `:PlugInstall` to refresh/update the plugins
+   If you are happy with the changes that `chezmoi` will make then run:
+   * `$ chezmoi apply -v`
+
+5. In `vi(m)`, run `:PlugInstall` to refresh/update the plugins.
