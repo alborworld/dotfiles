@@ -4,7 +4,7 @@ export EDITOR='vim'
 export PATH="$HOME/bin:$PATH"
 alias dircolors='gdircolors'
 eval "$(/opt/homebrew/bin/brew shellenv)"
-{{ else if and (eq .chezmoi.os "linux") (eq .chezmoi.hostname "DiskStation") }}
+{{ else if and (eq .chezmoi.os "linux") (or (eq .chezmoi.hostname "DiskStation") (eq .chezmoi.hostname "dockerhost")) }}
 export PATH="$HOME/bin:$PATH"
 {{ end }}
 
