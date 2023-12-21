@@ -8,7 +8,7 @@
 # user {{{
 [user]
 [includeIf "gitdir:~/*/"]
-    path = ~/.gitconfig_personal
+    path = ~/.gitconfig_alborworld
 #[includeIf "gitdir:~/special*/"]
 #    path = ~/.gitconfig_special
 # }}}
