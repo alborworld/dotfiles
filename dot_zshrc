@@ -129,7 +129,7 @@ unset key
 # }}} End configuration added by Zim install
 
 # Starship
-export STARSHIP_CONFIG="$HOME/starship.toml"
+export STARSHIP_CONFIG="$HOME/.starship.toml"
 eval "$(starship init zsh)"
 
 # Command-Line Fuzzy Finder
