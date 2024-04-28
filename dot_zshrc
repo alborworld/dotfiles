@@ -146,6 +146,8 @@ case $os in
        alias terraform_sort_variables='cat variables.tf | gawk -f ~/bin/tf_vars_sort.awk | tee variables.tf'
        alias terraform_sort_outputs='cat outputs.tf | gawk -f ~/bin/tf_vars_sort.awk | tee outputs.tf'
        alias whatsmyip='curl ifconfig.me'
+       alias wg-up='wg-quick up $HOME/.ssh/alborworld-wg.conf'
+       alias wg-down='wg-quick down $HOME/.ssh/alborworld-wg.conf'
        ;;
     "Linux"  )
        alias ls='ls --color=auto'
