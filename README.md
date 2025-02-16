@@ -21,4 +21,7 @@ INSTALLATION
    If you are happy with the changes that `chezmoi` will make then run:
    * `$ chezmoi apply -v`
 
-5. In `vi(m)`, run `:PlugInstall` to refresh/update the plugins.
+5. Create vim config directory.
+   * `$ mkdir -p $HOME/.vim/autoload`
+
+6. In `vi(m)`, run `:PlugInstall` to refresh/update the plugins.
